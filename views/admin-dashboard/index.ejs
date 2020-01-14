@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="title icon" href="img/title.png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"
+        integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe"
+        crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel='stylesheet' href='/admin-dashboard/style.css'>
+    <title>Project</title>
+</head>
+
+<body>
+    <!-- navbar -->
+    <%- include('../admin-dashboard/navbar') -%>
+    <!-- end of navbar -->
+
+    <div div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"
+        id="mess">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="width: auto;">
+                    <button type="button" class="close" data-dismiss="modal" class="text-right">&times;</button>
+                </div>
+                <div class="container clearfix text-right">
+                    <div class="people-list" id="people-list">
+                        <div class="search">
+                            <input type="text" placeholder="search" />
+                            <i class="fa fa-search"></i>
+                        </div>
+                    </div>
+                    <div class="chat">
+                        <div class="chat-header clearfix text-right">
+                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/chat_avatar_01_green.jpg"
+                                alt="avatar" />
+                        </div>
+                        <!-- end chat-header -->
+                        <div class="chat-box clearfix">
+                            <textarea style="width: 470px; height: 450px;" name="message-to-send" id="message-to-send"
+                                rows="3"></textarea>
+                        </div>
+                        <div class="chat-message clearfix">
+                            <textarea style="width: 400px;" name="message-to-send" id="message-to-send"
+                                placeholder="Type your message" rows="3"></textarea>
+                            <button>Send</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- end chat-message -->
+            </div>
+            <!-- end chat -->
+        </div>
+        <!-- end container -->
+    </div>
+    <!-- table -->
+    <section>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xl-10 col-lg-9 col-md-8 ml-auto" style="margin-top: 80px;">
+                    <div class="row align-items mb-5">
+                        <div class="col-xl-12">
+                            <div class="card ">
+                                <div class="card-header card-header-success card-header-icon">
+                                    <div class="card-icon">
+                                        <i class="material-icons"></i>
+                                    </div>
+                                    <h4 class="card-title">Bảng tin</h4>
+                                </div>
+                                <div class="card-body ">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="table-responsive table-sales">
+                                                <table class="table table-striped bg-light">
+                                                    <div style="text-align: right">
+                                                        <a href="/dashboard/topic/create" data-toggle="tooltip" title="<h6>Add News</h6>" data-html="true"
+                                                            data-placement="top">
+                                                            <i class="fas fa-plus-square fa-2x text-success mr-2 text-center text-right"
+                                                                data-toggle="modal"></i>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <form>
+                                                            <div class="input-group">
+                                                                <input type="text" class="form-control search-input"
+                                                                    placeholder="Search...">
+                                                                <button type="button"
+                                                                    class="btn btn-primary search-button"><i
+                                                                        class="fas fa-search text-danger">
+                                                                    </i></button>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">#</th>
+                                                            <th scope="col">Tên bài viết</th>
+                                                            <th scope="col">Người đăng</th>
+                                                            <th scope="col">Thời gian</th>
+                                                            <th></th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                1 </td>
+                                                            <td><a href="">
+                                                                    Bài 1
+                                                                </a></td>
+                                                            <td class="text-left">
+                                                                1.300
+                                                            </td>
+                                                            <td class="text-left">
+                                                                20.43%
+                                                            </td>
+                                                            <td><a href=""><i
+                                                                        class="fas fa-trash-alt text-danger text-center"></i></a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                1 </td>
+                                                            <td><a href="">
+                                                                    Bài 2
+                                                                </a></td>
+                                                            <td class="text-left">
+                                                                1.300
+                                                            </td>
+                                                            <td class="text-left">
+                                                                20.43%
+                                                            </td>
+                                                            <td><a href=""><i
+                                                                        class="fas fa-trash-alt text-danger text-center"></i></a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                1 </td>
+                                                            <td><a href="">
+                                                                    Bài 3
+                                                                </a></td>
+                                                            <td class="text-left">
+                                                                1.300
+                                                            </td>
+                                                            <td class="text-left">
+                                                                20.43%
+                                                            </td>
+                                                            <td><a href=""><i class="fas fa-trash-alt text-danger text-center"></i></a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                1 </td>
+                                                            <td><a href="">
+                                                                    Bài 4
+                                                                </a></td>
+                                                            <td class="text-left">
+                                                                1.300
+                                                            </td>
+                                                            <td class="text-left">
+                                                                20.43%
+                                                            </td>
+                                                            <td><a href=""><i
+                                                                        class="fas fa-trash-alt text-danger text-center"></i></a>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <nav>
+                                                    <ul class="pagination justify-content-center">
+                                                        <li class="page-item">
+                                                            <a href="#" class="page-link py-2 px-3">
+                                                                <span>Previous</span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="page-item active">
+                                                            <a href="#" class="page-link py-2 px-3">
+                                                                1
+                                                            </a>
+                                                        </li>
+                                                        <li class="page-item">
+                                                            <a href="#" class="page-link py-2 px-3">
+                                                                2
+                                                            </a>
+                                                        </li>
+                                                        <li class="page-item">
+                                                            <a href="#" class="page-link py-2 px-3">
+                                                                3 </a>
+                                                        </li>
+                                                        <li class="page-item">
+                                                            <a href="#" class="page-link py-2 px-3">
+                                                                <span>Next</span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </nav>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto mr-auto">
+                                            <div id="worldMap" style="height: auto;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end of table -->
+
+    <!-- process -->
+
+    <!-- footer -->
+    <footer class="bg-dark px-5">
+        <div class="container-fluid row">
+            <div class="row col-xl-10 col-lg-9 col-md-8 ml-auto">
+                <div class="row text-light py-4">
+                    <div class="col-lg-4 col-sm-6">
+                        <h5 class="pb-3">About Us</h5>
+                        <p class="small">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat quam sapiente
+                            eligendi fugit delectus blanditiis sint odio sequi dolores officia voluptatum iste
+                            necessitatibus nihil, quas et vero quasi repellendus illum?
+                        </p>
+                    </div>
+                    <div class="col-lg-2 col-sm-6 mx-auto">
+                        <h5 class="pb-3">Visit Us</h5>
+                        <ul class="list-umstyked">
+                            <li>
+                                <a href="#" class="footer-link">Home</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer-link">Mission</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer-link">Collection</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer-link">Gallery</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer-link">Customers</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer-link">Picing</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer-link">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2 col-sm-6">
+                        <h5 class="pb-3">Need Help?</h5>
+                        <ul class="list-umstyled">
+                            <li>
+                                <a href="#" class="footer-link text-uppercase">Customers Serivce</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer-link text-uppercase">Online Chat</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer-link text-uppercase">Support</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer-link text-info">JoinTeam@email.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <h5 class="pb-3">Stay Connected</h5>
+                        <p class="small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni laudantium velit
+                            totam ab, necessitatibus fugiat enim quidem rem pariatur, optio excepturi repellendus
+                            aliquam! Itaque, exercitationem sunt! Adipisci laborum delectus
+                            libero!
+                        </p>
+                        <form class="mt-5">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Email Address">
+                                <div class="input-group-append">
+                                    <button type="button"
+                                        class="btn bg-danger text-white text-uppercase font-weight-bold">Sign
+                                        Up</button>
+                                </div>
+                            </div>
+                        </form>
+                        <ul class="list-inline mt-3">
+                            <li class="list-inline-item">
+                                <a href=""><i class="fab fa-facebook-square fa-2x text-primary"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href=""><i class="fab fa-google-plus fa-2x text-danger"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href=""><i class="fab fa-instagram fa-2x text-primary"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href=""><i class="fab fa-twitter fa-2x text-info"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href=""><i class="fab fa-youtube fa-2x text-danger"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row  col-xl-12 text-center">
+                    <div class="col text-center text-light border-top pt-3">
+                        <p>&copy; 2018 Copyright, All Right Reserved</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- end of footer -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+{
+  "name": "testlogin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parse": "^0.1.0",
+    "cookie-parser": "^1.4.4",
+    "cors": "^2.8.5",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "express-flash": "0.0.2",
+    "express-session": "^1.17.0",
+    "mongoose": "^5.8.6",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "save": "^2.4.0"
+  }
+}

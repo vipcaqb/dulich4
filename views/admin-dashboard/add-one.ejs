@@ -1,0 +1,87 @@
+<section class="content">
+    <div class="container-fluid row mb-5">
+        <div class="row col-xl-10 col-lg-9 col-md-8 ml-auto">
+            <div class="col-xl-12 col-sm-6 p-2" style="margin-top: 50px;">
+                <form action="/Admin/News/Edit" method="post">
+                    <div class="box-footer text-right">
+                        <a class="btn btn-default" href="/Admin/News" onclick="return confirm('Do you want to cancel and back to list of News?')">Cancel and Back to
+                            All News</a>
+                        <button type="submit" class="btn btn-primary">Save News</button>
+                    </div>
+                    <div class="box box-default">
+                        <div class="box-header text-right row col-xl-10 col-lg-9 col-md-8 ml-auto">
+                        </div>
+
+                        <div class="box-body">
+                            <div class="form-group">
+                                <label>Tiêu đề: <small class="text-red"><span class="field-validation-valid"
+                                            data-valmsg-for="Title"
+                                            data-valmsg-replace="true"></span></small></label>
+                                <input class="form-control" id="Title" name="title" required="required" type="text" />
+                            </div>
+                            <div class="form-group">
+                                <label>Địa chỉ URL: <small class="text-red"><span class="field-validation-valid"
+                                            data-valmsg-for="UrlTitle"
+                                            data-valmsg-replace="true"></span></small></label>
+                                <input class="form-control" id="UrlTitle" name="urlTitle" type="text" />
+                            </div>
+                            <div class="form-group">
+                                <label>Location: <small class="text-red"><span class="field-validation-valid"
+                                            data-valmsg-for="UrlTitle"
+                                            data-valmsg-replace="true"></span></small></label>
+                                <input class="form-control" id="UrlTitle" name="location" type="text" />
+                            </div>
+                            <div class="form-group">
+                                <label>Hot topic ? <small class="text-red"><span class="field-validation-valid"
+                                            data-valmsg-for="UrlTitle"
+                                            data-valmsg-replace="true"></span></small></label>
+                                <input class="form-control" id="UrlTitle" name="isHot" type="text" />
+                            </div>
+                            <div class="form-group">
+                                <label>Small image :<small class="text-red"><span class="field-validation-valid"
+                                            data-valmsg-for="UrlTitle"
+                                            data-valmsg-replace="true"></span></small></label>
+                                <input class="form-control" id="UrlTitle" name="isHot" type="text" />
+                            </div>
+
+                            <div class="form-group">
+                                <label>Thể loại: <small class="text-red"><span class="field-validation-valid"
+                                            data-valmsg-for="CategoryId"
+                                            data-valmsg-replace="true"></span></small></label>
+
+                                <select class="form-control" data-val="true" data-val-number="The field CategoryId must be a number." data-val-required="The CategoryId field is required." id="CategoryId" name="CategoryId">
+                                    <option value="1">Thời sự</option>
+                                </select>
+
+
+
+                            </div>
+
+                            <div class="form-group">
+                                <label>Khái quát: <small class="text-red"><span class="field-validation-valid"
+                                            data-valmsg-for="ShortContent"
+                                            data-valmsg-replace="true"></span></small></label>
+                                <textarea class="form-control" cols="20" id="ShortContent" name="ShortContent" required="required" rows="2" style="height:100px"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Viết tin: <small class="text-red"><span class="field-validation-valid"
+                                            data-valmsg-for="FullContent"
+                                            data-valmsg-replace="true"></span></small></label>
+                                <textarea class="form-control" cols="20" id="FullContent" name="FullContent" required="required" rows="2"></textarea>
+                            </div>
+
+                        </div>
+
+                        <div class="box-footer text-right">
+                            <a class="btn btn-default" href="/Admin/News" onclick="return confirm('Do you want to cancel and back to list of News?')">Cancel
+                                and Back to
+                                All News</a>
+                            <button type="submit" class="btn btn-primary">Save News</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

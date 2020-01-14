@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+/* #d35400 */
+body {
+    min-height: 100vh;
+    background: #DEDEDE;
+}
+
+/* 
+*Login
+*/
+#login-form{
+    box-shadow: #000 5px 5px 20px;
+    background: #fff;
+    border: none;
+    height: 580px;
+    width: 360px;
+    padding: 80px 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#login-form h1 {
+    text-shadow: #d35400 1px 1px 4px;
+    color: #d35400;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+#login-form .textbox {
+    border-bottom: #d35400 solid 2px;
+    padding: 6px;
+}
+
+#login-form .textbox {
+    margin-top: 10px;
+}
+
+
+#login-form .textbox input {   
+    padding-left: 5px;
+    outline: none;
+    font-size: 18px;
+    border: none;
+    height: 40px;
+    background: none;
+    width: 100%;
+    height: 40px;
+}
+
+#login-form .checkbox {
+    margin-top: 15px;
+    font-size: 18px;
+    height: 50px;
+}
+
+
+#login-form button {
+    margin-top: 5px;
+    display: block;
+    width: 100%;
+    height: 40px;
+    border: none;
+    background: #d35400;
+    color: #fff;
+    box-shadow: #d35400 3px 3px 15px;
+}
+
+#login-form .bottom-text {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 18px;
+}
+
+@media only screen and (max-width: 400px) {
+    #login-form {
+        width: 100%;
+        padding: 60px 20px;
+    }
+}
+/* 
+    End of login
+*/
+
+/* 
+*Sign up
+*/
+
+
+#signup-form{
+    box-shadow: #000 5px 5px 20px;
+    background: #fff;
+    border: none;
+    height: 640px;
+    width: 400px;
+    padding: 40px 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#signup-form h2 {
+    text-shadow: #d35400 1px 1px 4px;
+    color: #d35400;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#signup-form .textbox {
+    padding: 14px 8px;
+}
+
+#signup-form .textbox input {
+    padding-left: 20px;
+    background: none;
+    outline: none;
+    height: 40px;
+    border: #d35400 solid 1px;
+    border-radius: 4px;
+    width: 100%;
+}
+
+#signup-form button {
+    margin-top: 60px;
+    display: block;
+    width: 100%;
+    height: 40px;
+    border: none;
+    background: #d35400;
+    color: #fff;
+    box-shadow: #d35400 3px 3px 15px;
+}
+
+@media only screen and (max-height: 568px){
+    #signup-form{
+        top: 0%;
+        left: 50%;
+        transform: translate(-50%,0);
+    }
+}
+
+
+@media only screen and (max-width: 400px){
+    #signup-form{
+        width: 95%;
+        padding: 40px 5px;
+    }
+}
+
+/* 
+    End of sign up
+*/
